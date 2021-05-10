@@ -96,6 +96,8 @@ Napi::Value BlenoMac::StartAdvertisingWithEIRData(const Napi::CallbackInfo& info
 Napi::Value BlenoMac::StopAdvertising(const Napi::CallbackInfo& info) {
     NSLog(@"BlenoMac::StopAdvertising");
 
+    [peripheralManager stopAdvertising];
+
     return Napi::Value();
 }
 
